@@ -1,0 +1,14 @@
+{
+  "rank": 1,
+  "symbol": "RELIANCE",
+  "timeframe": "1m",
+  "score": 0.7194539224893852,
+  "market_state": "breakout_watch",
+  "breakout_probability": 0.8866325351773223,
+  "fakeout_probability": 0.25,
+  "risk_state": "caution",
+  "risk_veto": false,
+  "reasoning": [
+    "rank score combines structure, probability, fakeout risk, and risk veto"
+  ]
+}

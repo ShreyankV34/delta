@@ -1,0 +1,26 @@
+{
+  "profile": "compression_scanner",
+  "analysis_timeframe": "1h",
+  "result_timeframe": "1h",
+  "target_timeframes": [
+    "1d",
+    "1h",
+    "1m",
+    "4h"
+  ],
+  "alert_type": "structure_monitor",
+  "alert_message": "RELIANCE structure is being monitored on 1h.",
+  "ranking_timeframe": "1h",
+  "dashboard_ranking_timeframe": "1h",
+  "dashboard_alert_timeline": [
+    "RELIANCE structure is being monitored on 1h.",
+    "type=structure_monitor confidence=0.20"
+  ],
+  "dashboard_scanner_activity": [
+    "scan_symbol=RELIANCE",
+    "analysis_timeframe=1h",
+    "target_timeframes=1d,4h,1h,1m",
+    "liquidity_events=0",
+    "ranking_score=0.208"
+  ]
+}

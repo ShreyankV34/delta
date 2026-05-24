@@ -1,0 +1,341 @@
+{
+  "command": {
+    "raw_text": "Show top compression candidates.",
+    "audio_source": "text",
+    "timestamp": "2024-01-01T00:00:00+00:00",
+    "user_context": [
+      "phase_1",
+      "offline_csv"
+    ],
+    "active_symbol": "RELIANCE",
+    "active_timeframe": "1m"
+  },
+  "response": {
+    "spoken_text": "I found 1 ranked opportunities in the current dashboard view.",
+    "display_title": "Scanner Query",
+    "display_body": "scan_focus=compression\nranking_rows=1",
+    "confidence": 0.95,
+    "citations_to_agent_outputs": [
+      "dashboard.ranking_rows"
+    ],
+    "follow_up_options": [
+      "Open ranking dashboard",
+      "Analyze active symbol"
+    ]
+  },
+  "audit": {
+    "transcript": "Show top compression candidates.",
+    "parsed_intent": {
+      "intent_name": "scanner_query",
+      "slots": {
+        "scan_focus": "compression"
+      },
+      "confidence": 0.95,
+      "required_agents": [
+        "ranking_agent",
+        "ui_agent"
+      ],
+      "safety_level": "medium",
+      "needs_confirmation": false
+    },
+    "action_taken": "scan_ranked_opportunities",
+    "veto_state": "clear",
+    "latency_ms": 0,
+    "error_state": null,
+    "timestamp": "2024-01-01T00:00:00+00:00"
+  },
+  "context_symbol": "RELIANCE",
+  "context_timeframe": "1m",
+  "market_status": "breakout_watch",
+  "dashboard": {
+    "symbol": "RELIANCE",
+    "status": "CSV MODE ACTIVE",
+    "status_items": [
+      {
+        "label": "market_status",
+        "value": "breakout_watch"
+      },
+      {
+        "label": "data_provider",
+        "value": "csv"
+      },
+      {
+        "label": "provider_health",
+        "value": "ready"
+      },
+      {
+        "label": "scan_latency",
+        "value": "deterministic_offline"
+      },
+      {
+        "label": "alert_engine",
+        "value": "breakout_probability_rising"
+      },
+      {
+        "label": "risk_mode",
+        "value": "caution"
+      },
+      {
+        "label": "app_mode",
+        "value": "offline_csv"
+      }
+    ],
+    "sidebar_sections": [
+      {
+        "title": "Watchlists",
+        "items": [
+          "nifty_50",
+          "fno_stocks",
+          "custom_watchlist"
+        ]
+      },
+      {
+        "title": "Universe Selection",
+        "items": [
+          "NIFTY 50 | mixed | 5",
+          "F&O Stocks | derivatives | 4",
+          "Custom Watchlist | mixed | 4"
+        ]
+      },
+      {
+        "title": "Filters",
+        "items": [
+          "default_universe=nifty_50",
+          "timeframes=1m,5m,15m,1h,4h,1d",
+          "scan_profiles=3",
+          "risk_profiles=2"
+        ]
+      },
+      {
+        "title": "Scan Profiles",
+        "items": [
+          "compression_scanner [1d,4h,1h]",
+          "breakout_probability [4h,1h,15m]",
+          "fakeout_detection [1d,4h,1h]"
+        ]
+      },
+      {
+        "title": "Trade Profiles",
+        "items": [
+          "swing | ctx 1M/1W | exec 1h/15m",
+          "intraday | ctx 1d/4h | exec 5m",
+          "position | ctx 1M/1W | exec 4h/1h"
+        ]
+      },
+      {
+        "title": "Risk Profiles",
+        "items": [
+          "normal | fakeout<=0.70 | veto=on",
+          "conservative | fakeout<=0.55 | veto=on"
+        ]
+      }
+    ],
+    "right_panel_sections": [
+      {
+        "title": "DELTA Intelligence Summary",
+        "lines": [
+          "structure=wedge_like",
+          "market_state=breakout_watch",
+          "alignment=aligned_with_htf",
+          "ranking_score=0.72"
+        ]
+      },
+      {
+        "title": "Probability Panel",
+        "lines": [
+          "breakout=0.89",
+          "fakeout=0.25",
+          "reversal=0.29",
+          "continuation=0.70"
+        ]
+      },
+      {
+        "title": "Risk Panel",
+        "lines": [
+          "risk_state=caution",
+          "veto=off",
+          "invalidation=110.00",
+          "risk_reward=0.20"
+        ]
+      },
+      {
+        "title": "Execution Quality Panel",
+        "lines": [
+          "execution_quality=ready",
+          "alert_state=breakout_watch",
+          "structure_confidence=0.98",
+          "execution_mode=aligned_with_htf"
+        ]
+      }
+    ],
+    "voice_status": {
+      "state": "responding",
+      "mode": "text_stub",
+      "muted": false,
+      "last_intent": "scanner_query",
+      "last_confidence": 0.95,
+      "last_veto_state": "clear"
+    },
+    "voice_transcript": [
+      {
+        "timestamp": "2024-01-01T00:00:00+00:00",
+        "speaker": "trader",
+        "text": "Show top compression candidates.",
+        "intent": "scanner_query",
+        "confidence": 0.95,
+        "action": "scan_ranked_opportunities",
+        "veto_state": "clear"
+      },
+      {
+        "timestamp": "2024-01-01T00:00:00+00:00",
+        "speaker": "delta",
+        "text": "I found 1 ranked opportunities in the current dashboard view.",
+        "intent": "scanner_query",
+        "confidence": 0.95,
+        "action": "responded",
+        "veto_state": "clear"
+      }
+    ],
+    "overlays": [
+      {
+        "overlay_type": "trendline",
+        "label": "upper_trendline",
+        "points": [
+          [
+            0.0,
+            100.16666666666667
+          ],
+          [
+            10.0,
+            111.83333333333334
+          ]
+        ],
+        "confidence": 0.9781746031746033
+      },
+      {
+        "overlay_type": "trendline",
+        "label": "lower_trendline",
+        "points": [
+          [
+            0.0,
+            93.5
+          ],
+          [
+            10.0,
+            108.5
+          ]
+        ],
+        "confidence": 0.9781746031746033
+      }
+    ],
+    "timeframe_rows": [
+      {
+        "timeframe": "1d",
+        "bias": "neutral",
+        "structure": "insufficient_data",
+        "liquidity": "quiet",
+        "volatility": "balanced",
+        "breakout_probability": 0.35,
+        "fakeout_risk": 0.43,
+        "execution_quality": "wait",
+        "risk_state": "normal",
+        "comment": "insufficient_data; detected 0 phase-1 liquidity/structure events; final score uses breakout probability, fakeout risk, and risk filter"
+      },
+      {
+        "timeframe": "4h",
+        "bias": "neutral",
+        "structure": "insufficient_data",
+        "liquidity": "quiet",
+        "volatility": "balanced",
+        "breakout_probability": 0.35,
+        "fakeout_risk": 0.43,
+        "execution_quality": "wait",
+        "risk_state": "normal",
+        "comment": "insufficient_data; detected 0 phase-1 liquidity/structure events; final score uses breakout probability, fakeout risk, and risk filter"
+      },
+      {
+        "timeframe": "1h",
+        "bias": "neutral",
+        "structure": "insufficient_data",
+        "liquidity": "quiet",
+        "volatility": "balanced",
+        "breakout_probability": 0.35,
+        "fakeout_risk": 0.43,
+        "execution_quality": "wait",
+        "risk_state": "normal",
+        "comment": "insufficient_data; detected 0 phase-1 liquidity/structure events; final score uses breakout probability, fakeout risk, and risk filter"
+      },
+      {
+        "timeframe": "15m",
+        "bias": "neutral",
+        "structure": "insufficient_data",
+        "liquidity": "quiet",
+        "volatility": "balanced",
+        "breakout_probability": 0.35,
+        "fakeout_risk": 0.43,
+        "execution_quality": "wait",
+        "risk_state": "normal",
+        "comment": "insufficient_data; detected 0 phase-1 liquidity/structure events; final score uses breakout probability, fakeout risk, and risk filter"
+      },
+      {
+        "timeframe": "5m",
+        "bias": "bullish",
+        "structure": "channel_like",
+        "liquidity": "active",
+        "volatility": "balanced",
+        "breakout_probability": 0.6275,
+        "fakeout_risk": 0.25,
+        "execution_quality": "developing",
+        "risk_state": "caution",
+        "comment": "channel_like; detected 1 phase-1 liquidity/structure events; final score uses breakout probability, fakeout risk, and risk filter"
+      },
+      {
+        "timeframe": "1m",
+        "bias": "bullish",
+        "structure": "wedge_like",
+        "liquidity": "sweep_detected",
+        "volatility": "compressed",
+        "breakout_probability": 0.8866325351773223,
+        "fakeout_risk": 0.25,
+        "execution_quality": "ready",
+        "risk_state": "caution",
+        "comment": "wedge_like; detected 6 phase-1 liquidity/structure events; final score uses breakout probability, fakeout risk, and risk filter"
+      }
+    ],
+    "ranking_rows": [
+      {
+        "rank": 1,
+        "symbol": "RELIANCE",
+        "timeframe": "1m",
+        "score": 0.7194539224893852,
+        "market_state": "breakout_watch",
+        "breakout_probability": 0.8866325351773223,
+        "fakeout_probability": 0.25,
+        "risk_state": "caution",
+        "risk_veto": false,
+        "comment": "rank score combines structure, probability, fakeout risk, and risk veto"
+      }
+    ],
+    "alerts": [
+      "RELIANCE breakout probability rising on 1m."
+    ],
+    "alert_timeline": [
+      "RELIANCE breakout probability rising on 1m.",
+      "type=breakout_probability_rising confidence=0.89",
+      "risk_note=risk/reward is weak on baseline structure"
+    ],
+    "scanner_activity": [
+      "scan_symbol=RELIANCE",
+      "analysis_timeframe=1m",
+      "target_timeframes=1d,4h,1h,15m,5m,1m",
+      "liquidity_events=6",
+      "ranking_score=0.719"
+    ],
+    "diagnostics": [
+      "dashboard state generated from DTOs only",
+      "multi-timeframe table sourced from DTOs",
+      "ranking table sourced from DTOs",
+      "alert timeline sourced from DTOs"
+    ]
+  }
+}

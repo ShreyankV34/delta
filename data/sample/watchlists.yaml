@@ -1,0 +1,35 @@
+universes:
+  nifty_50:
+    display_name: NIFTY 50
+    sector: mixed
+    theme: broad_market
+    symbols:
+      - RELIANCE
+      - TCS
+      - INFY
+      - HDFCBANK
+      - ICICIBANK
+  fno_stocks:
+    display_name: F&O Stocks
+    sector: derivatives
+    theme: liquid_trading
+    symbols:
+      - RELIANCE
+      - SBIN
+      - AXISBANK
+      - LT
+  custom_watchlist:
+    display_name: Custom Watchlist
+    sector: mixed
+    theme: discretionary
+    symbols:
+      - symbol: RELIANCE
+        display_name: Reliance Industries
+        sector: energy
+        theme: index_heavyweight
+      - symbol: INFY
+        display_name: Infosys
+        sector: it
+        theme: technology
+      - bad symbol
+      - RELIANCE

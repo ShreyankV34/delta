@@ -1,0 +1,34 @@
+{
+  "default": {
+    "analysis_timeframe": "1m",
+    "scanner_activity": [
+      "scan_symbol=RELIANCE",
+      "analysis_timeframe=1m",
+      "target_timeframes=1d,4h,1h,15m,5m,1m",
+      "liquidity_events=6",
+      "ranking_score=0.719"
+    ]
+  },
+  "override": {
+    "profile": "breakout_probability",
+    "analysis_timeframe": "15m",
+    "scanner_activity": [
+      "scan_symbol=RELIANCE",
+      "analysis_timeframe=15m",
+      "target_timeframes=4h,1h,15m,1m",
+      "liquidity_events=0",
+      "ranking_score=0.208"
+    ]
+  },
+  "unknown_profile_fallback": {
+    "profile": "unknown_profile",
+    "analysis_timeframe": "1m",
+    "scanner_activity": [
+      "scan_symbol=RELIANCE",
+      "analysis_timeframe=1m",
+      "target_timeframes=1d,4h,1h,15m,5m,1m",
+      "liquidity_events=6",
+      "ranking_score=0.719"
+    ]
+  }
+}

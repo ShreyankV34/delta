@@ -1,0 +1,23 @@
+{
+  "command": "voice",
+  "status": "error",
+  "provider": "yahoo_finance",
+  "symbol": "RELIANCE",
+  "analysis_timeframe": "1m",
+  "response": {
+    "spoken_text": "Data provider error. Scan context unavailable.",
+    "display_title": "Data Provider Error",
+    "display_body": "Scan context could not be loaded. Retry the command after data recovery."
+  },
+  "audit": {
+    "veto_state": "data_unavailable",
+    "error_state": "scan_context_unavailable"
+  },
+  "input": {
+    "text": "Show top compression candidates."
+  },
+  "error": {
+    "type": "TimeoutError",
+    "message": "provider timeout"
+  }
+}

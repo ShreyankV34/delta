@@ -1,0 +1,9 @@
+profiles:
+  normal:
+    max_fakeout_probability: 0.7
+    min_breakout_probability: 0.25
+    allow_risk_veto: true
+  conservative:
+    max_fakeout_probability: 0.55
+    min_breakout_probability: 0.4
+    allow_risk_veto: true

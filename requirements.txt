@@ -1,0 +1,7 @@
+# DELTA OS Phase-1 default environment.
+# Installs the package in editable mode with test/dev tooling and YAML support.
+-e .[dev,yaml]
+
+# GUI dependencies stay optional in Phase 1.
+# Install them separately when working on the PySide6 dashboard:
+# pip install -e ".[dev,yaml,gui]"

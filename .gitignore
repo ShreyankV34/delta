@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+osdelta/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local data and generated outputs
+.codex_tmp_*/
+.codex_tmp_*.zip
+.pytest_tmp/
+data/local/
+data/processed/
+reports/
+exports/
+logs/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

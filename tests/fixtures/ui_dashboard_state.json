@@ -1,0 +1,207 @@
+{
+  "symbol": "RELIANCE",
+  "status": "CSV MODE ACTIVE",
+  "status_items": [
+    {"label": "market_status", "value": "breakout_watch"},
+    {"label": "data_provider", "value": "csv"},
+    {"label": "provider_health", "value": "ready"},
+    {"label": "scan_latency", "value": "deterministic_offline"},
+    {"label": "alert_engine", "value": "breakout_probability_rising"},
+    {"label": "risk_mode", "value": "caution"},
+    {"label": "app_mode", "value": "offline_csv"}
+  ],
+  "sidebar_sections": [
+    {"title": "Watchlists", "items": ["nifty_50", "fno_stocks", "custom_watchlist"]},
+    {"title": "Universe Selection", "items": ["NIFTY 50 | mixed | 5", "F&O Stocks | derivatives | 4", "Custom Watchlist | mixed | 4"]},
+    {"title": "Filters", "items": ["default_universe=nifty_50", "timeframes=1m,5m,15m,1h,4h,1d", "scan_profiles=3", "risk_profiles=2"]},
+    {"title": "Scan Profiles", "items": ["compression_scanner [1d,4h,1h]", "breakout_probability [4h,1h,15m]", "fakeout_detection [1d,4h,1h]"]},
+    {"title": "Trade Profiles", "items": ["swing | ctx 1M/1W | exec 1h/15m", "intraday | ctx 1d/4h | exec 5m", "position | ctx 1M/1W | exec 4h/1h"]},
+    {"title": "Risk Profiles", "items": ["normal | fakeout<=0.70 | veto=on", "conservative | fakeout<=0.55 | veto=on"]}
+  ],
+  "right_panel_sections": [
+    {
+      "title": "DELTA Intelligence Summary",
+      "lines": [
+        "structure=wedge_like",
+        "market_state=breakout_watch",
+        "alignment=aligned_with_htf",
+        "ranking_score=0.81"
+      ]
+    },
+    {
+      "title": "Probability Panel",
+      "lines": [
+        "breakout=0.71",
+        "fakeout=0.28",
+        "reversal=0.24",
+        "continuation=0.67"
+      ]
+    },
+    {
+      "title": "Risk Panel",
+      "lines": [
+        "risk_state=caution",
+        "veto=off",
+        "invalidation=100.80",
+        "risk_reward=1.80"
+      ]
+    },
+    {
+      "title": "Execution Quality Panel",
+      "lines": [
+        "execution_quality=improving",
+        "alert_state=breakout_watch",
+        "structure_confidence=0.92",
+        "execution_mode=aligned_with_htf"
+      ]
+    },
+    {
+      "title": "Voice Response Card",
+      "lines": [
+        "intent=scanner_query",
+        "confidence=0.95",
+        "spoken=I found 3 ranked opportunities in the current dashboard view.",
+        "veto_state=clear"
+      ]
+    }
+  ],
+  "voice_status": {
+    "state": "responding",
+    "mode": "text_stub",
+    "muted": false,
+    "last_intent": "scanner_query",
+    "last_confidence": 0.95,
+    "last_veto_state": "clear"
+  },
+  "voice_transcript": [
+    {
+      "timestamp": "2024-01-01T09:31:00+00:00",
+      "speaker": "trader",
+      "text": "Show top compression candidates.",
+      "intent": "scanner_query",
+      "confidence": 0.95,
+      "action": "scan_ranked_opportunities",
+      "veto_state": "clear"
+    },
+    {
+      "timestamp": "2024-01-01T09:31:01+00:00",
+      "speaker": "delta",
+      "text": "I found 3 ranked opportunities in the current dashboard view.",
+      "intent": "scanner_query",
+      "confidence": 0.95,
+      "action": "spoken_response",
+      "veto_state": "clear"
+    }
+  ],
+  "overlays": [
+    {
+      "overlay_type": "trendline",
+      "label": "upper_trendline",
+      "points": [[0.0, 110.0], [9.0, 104.5]],
+      "confidence": 0.92
+    },
+    {
+      "overlay_type": "trendline",
+      "label": "lower_trendline",
+      "points": [[0.0, 94.0], [9.0, 99.0]],
+      "confidence": 0.92
+    },
+    {
+      "overlay_type": "zone",
+      "label": "fvg_zone",
+      "points": [[4.0, 101.2], [6.0, 103.8]],
+      "confidence": 0.74
+    }
+  ],
+  "timeframe_rows": [
+    {
+      "timeframe": "1d",
+      "bias": "bullish",
+      "structure": "wedge_like",
+      "liquidity": "events",
+      "volatility": "compressing",
+      "breakout_probability": 0.71,
+      "fakeout_risk": 0.28,
+      "execution_quality": "developing",
+      "risk_state": "normal",
+      "comment": "Daily compression intact"
+    },
+    {
+      "timeframe": "4h",
+      "bias": "bullish",
+      "structure": "breakout_watch",
+      "liquidity": "sweep_complete",
+      "volatility": "expanding",
+      "breakout_probability": 0.78,
+      "fakeout_risk": 0.33,
+      "execution_quality": "improving",
+      "risk_state": "caution",
+      "comment": "Sweep completed below prior lows"
+    }
+  ],
+  "ranking_rows": [
+    {
+      "rank": 1,
+      "symbol": "RELIANCE",
+      "timeframe": "4h",
+      "score": 0.81,
+      "market_state": "breakout_watch",
+      "breakout_probability": 0.78,
+      "fakeout_probability": 0.33,
+      "risk_state": "caution",
+      "risk_veto": false,
+      "comment": "Top compression candidate"
+    },
+    {
+      "rank": 2,
+      "symbol": "INFY",
+      "timeframe": "1d",
+      "score": 0.74,
+      "market_state": "monitor",
+      "breakout_probability": 0.66,
+      "fakeout_probability": 0.22,
+      "risk_state": "normal",
+      "risk_veto": false,
+      "comment": "Higher-timeframe compression with room to expand"
+    },
+    {
+      "rank": 3,
+      "symbol": "HDFCBANK",
+      "timeframe": "1h",
+      "score": 0.58,
+      "market_state": "fakeout_watch",
+      "breakout_probability": 0.49,
+      "fakeout_probability": 0.61,
+      "risk_state": "blocked",
+      "risk_veto": true,
+      "comment": "Fakeout risk elevated into weekly resistance"
+    }
+  ],
+  "alerts": [
+    "RELIANCE breakout probability rising on 4h.",
+    "Liquidity sweep detected on lower timeframe.",
+    "HDFCBANK execution quality deteriorating on 1h."
+  ],
+  "alert_timeline": [
+    "RELIANCE breakout probability rising on 4h.",
+    "type=breakout_probability_rising confidence=0.78",
+    "risk_note=HTF resistance nearby",
+    "HDFCBANK fakeout warning on 1h.",
+    "type=fakeout_warning confidence=0.61"
+  ],
+  "scanner_activity": [
+    "scan_symbol=RELIANCE",
+    "analysis_timeframe=4h",
+    "target_timeframes=1d,4h,1h",
+    "liquidity_events=3",
+    "ranking_score=0.810",
+    "ranking_rows=3",
+    "universe=nifty_50"
+  ],
+  "diagnostics": [
+    "dashboard state generated from DTOs only",
+    "fixture uses explicit overlay, ranking, and timeline rows",
+    "bottom panel groups alerts, timeline, scanner activity, and diagnostics",
+    "ranking table includes veto and non-veto rows"
+  ]
+}

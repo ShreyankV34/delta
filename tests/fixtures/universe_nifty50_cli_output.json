@@ -1,0 +1,56 @@
+{
+  "name": "nifty_50",
+  "source_path": "data/sample/watchlists.yaml",
+  "members": [
+    {
+      "symbol": "RELIANCE",
+      "display_name": "RELIANCE",
+      "sector": "mixed",
+      "theme": "broad_market",
+      "source_universe": "nifty_50"
+    },
+    {
+      "symbol": "TCS",
+      "display_name": "TCS",
+      "sector": "mixed",
+      "theme": "broad_market",
+      "source_universe": "nifty_50"
+    },
+    {
+      "symbol": "INFY",
+      "display_name": "INFY",
+      "sector": "mixed",
+      "theme": "broad_market",
+      "source_universe": "nifty_50"
+    },
+    {
+      "symbol": "HDFCBANK",
+      "display_name": "HDFCBANK",
+      "sector": "mixed",
+      "theme": "broad_market",
+      "source_universe": "nifty_50"
+    },
+    {
+      "symbol": "ICICIBANK",
+      "display_name": "ICICIBANK",
+      "sector": "mixed",
+      "theme": "broad_market",
+      "source_universe": "nifty_50"
+    }
+  ],
+  "total_members": 5,
+  "included_symbols": [
+    "RELIANCE",
+    "TCS",
+    "INFY",
+    "HDFCBANK",
+    "ICICIBANK"
+  ],
+  "excluded_symbols": [],
+  "reasoning": [
+    "loaded universe=nifty_50",
+    "included=5",
+    "excluded=0",
+    "symbols are normalized, de-duplicated, and filtered for invalid local entries"
+  ]
+}

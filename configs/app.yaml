@@ -1,0 +1,96 @@
+app:
+  name: DELTA OS
+  mode: offline_csv
+  default_symbol: RELIANCE
+  default_profile: compression_scanner
+
+data:
+  provider: csv
+  sample_csv_path: data/sample/reliance_1m.csv
+  timestamp_timezone: Asia/Kolkata
+  required_columns:
+    - timestamp
+    - open
+    - high
+    - low
+    - close
+    - volume
+    - symbol
+  yahoo_finance:
+    request_timeout_seconds: 10.0
+    range: 5d
+    interval: 1m
+    symbol_suffix: .NS
+    symbol_map:
+      RELIANCE: RELIANCE.NS
+
+timeframes:
+  source: 1m
+  enabled:
+    - 5m
+    - 15m
+    - 1h
+    - 4h
+    - 1d
+
+universe:
+  provider: local_watchlist_file
+  sample_watchlist_path: data/sample/watchlists.yaml
+  default_universe: nifty_50
+
+agents:
+  deterministic_mode: true
+  deterministic_alert_timestamp_utc: 2024-01-01T00:00:00+00:00
+  structural_geometry:
+    swing_left: 1
+    swing_right: 1
+    compression_threshold: 0.85
+  liquidity_concepts:
+    sweep_lookback: 3
+  probability:
+    breakout_base: 0.35
+    fakeout_base: 0.25
+  risk:
+    max_fakeout_probability: 0.7
+    min_breakout_probability: 0.25
+
+presentation:
+  ui_mode: pyqt_skeleton
+  theme: dark_professional
+
+live_data:
+  stream_provider: replay
+  symbols:
+    - RELIANCE
+  bootstrap_source: rest_snapshot
+  websocket_enabled: false
+
+execution:
+  enabled: false
+  mode: paper
+  broker: ibkr_reference
+  live_armed: false
+  require_runtime_arming: true
+  kill_switch_enabled: true
+  account_id_env: ${DELTA_ACCOUNT_ID}
+  api_key_env: ${DELTA_API_KEY}
+  api_secret_env: ${DELTA_API_SECRET}
+
+risk_limits:
+  max_order_notional: 1000000.0
+  max_position_notional: 5000000.0
+  max_daily_loss: 250000.0
+  max_slippage_bps: 50.0
+  max_spread_bps: 35.0
+
+connectivity:
+  heartbeat_max_age_ms: 3000
+  reconnect:
+    base_delay_ms: 250
+    max_delay_ms: 5000
+    jitter_ms: 100
+    max_attempts: 20
+
+latency_slo:
+  end_to_end_target_ms: 1000
+  breach_action: alert_only

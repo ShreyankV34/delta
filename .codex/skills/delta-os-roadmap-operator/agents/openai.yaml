@@ -1,0 +1,4 @@
+interface:
+  display_name: "DELTA Roadmap Operator"
+  short_description: "Roadmap-first DELTA OS execution workflow"
+  default_prompt: "Use this skill to execute DELTA OS tasks strictly from roadmap_docx.docx and project memory docs."

@@ -1,0 +1,24 @@
+{
+  "kind": "trade",
+  "source_path": "configs/trade_profiles.yaml",
+  "profiles": [
+    {
+      "name": "swing",
+      "context_timeframes": ["1M", "1W"],
+      "setup_timeframes": ["1d", "4h"],
+      "execution_timeframes": ["1h", "15m"]
+    },
+    {
+      "name": "intraday",
+      "context_timeframes": ["1d", "4h"],
+      "setup_timeframes": ["1h", "15m"],
+      "execution_timeframes": ["5m"]
+    },
+    {
+      "name": "position",
+      "context_timeframes": ["1M", "1W"],
+      "setup_timeframes": ["1d"],
+      "execution_timeframes": ["4h", "1h"]
+    }
+  ]
+}

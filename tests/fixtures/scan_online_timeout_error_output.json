@@ -1,0 +1,15 @@
+{
+  "command": "scan",
+  "status": "error",
+  "provider": "yahoo_finance",
+  "symbol": "RELIANCE",
+  "analysis_timeframe": "1m",
+  "dashboard": {
+    "provider_health": "down",
+    "provider_note": "load_failed"
+  },
+  "error": {
+    "type": "TimeoutError",
+    "message": "provider timeout"
+  }
+}

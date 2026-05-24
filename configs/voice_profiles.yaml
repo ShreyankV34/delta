@@ -1,0 +1,6 @@
+voice:
+  phase_1_mode: text_command_stub
+  push_to_talk_enabled: false
+  wake_word_enabled: false
+  execution_commands_allowed: false
+  audit_log_enabled: true

@@ -585,13 +585,15 @@ Full implementation details are defined in roadmap_docx.docx.
 
 Phase 1 — Offline Structural Intelligence
 
-Phase 1 is offline-first.
+Repository delivery is now live-market-first and roadmap-aligned.
+Deterministic CSV/replay fixtures remain for testing and regression only.
 
-It uses CSV candles only.
+Live data provider support currently includes online polling via
+`yahoo_finance`, with broker execution paths safety-gated.
 
-Phase 1 includes:
+Foundation includes:
 
-CSV provider
+live/polling data providers
 timeframe builder
 swing high/low detector
 trendline equation engine
@@ -687,7 +689,14 @@ source .venv/bin/activate
 
 Install dependencies:
 
-pip install -e ".[dev]"
+pip install -r requirements.txt
+
+This installs the editable Phase-1 development environment with pytest/dev
+tooling and YAML support.
+
+If you want the optional PySide6 dashboard dependencies too:
+
+pip install -e ".[dev,yaml,gui]"
 Example CSV Format
 timestamp,open,high,low,close,volume,symbol
 
@@ -700,6 +709,14 @@ Usage
 Run scanner:
 
 python -m delta_os.presentation.cli.main scan --config configs/app.yaml
+
+Run scanner in operator terminal view:
+
+python -m delta_os.presentation.cli.main scan --config configs/app.yaml --output terminal
+
+Run scanner with online market data (no execution routing):
+
+python -m delta_os.presentation.cli.main scan --config configs/app.yaml --provider yahoo_finance --symbol RELIANCE
 
 Run GUI:
 

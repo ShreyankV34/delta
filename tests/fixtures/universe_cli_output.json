@@ -1,0 +1,35 @@
+{
+  "name": "custom_watchlist",
+  "source_path": "data/sample/watchlists.yaml",
+  "members": [
+    {
+      "symbol": "RELIANCE",
+      "display_name": "Reliance Industries",
+      "sector": "energy",
+      "theme": "index_heavyweight",
+      "source_universe": "custom_watchlist"
+    },
+    {
+      "symbol": "INFY",
+      "display_name": "Infosys",
+      "sector": "it",
+      "theme": "technology",
+      "source_universe": "custom_watchlist"
+    }
+  ],
+  "total_members": 2,
+  "included_symbols": [
+    "RELIANCE",
+    "INFY"
+  ],
+  "excluded_symbols": [
+    "bad symbol",
+    "RELIANCE"
+  ],
+  "reasoning": [
+    "loaded universe=custom_watchlist",
+    "included=2",
+    "excluded=2",
+    "symbols are normalized, de-duplicated, and filtered for invalid local entries"
+  ]
+}

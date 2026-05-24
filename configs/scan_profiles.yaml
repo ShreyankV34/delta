@@ -1,0 +1,14 @@
+profiles:
+  compression_scanner:
+    description: Offline scan for mature compression structures.
+    timeframes: [1d, 4h, 1h]
+    min_wedge_score: 0.55
+    min_touch_count: 4
+  breakout_probability:
+    description: Rank symbols by baseline breakout probability.
+    timeframes: [4h, 1h, 15m]
+    min_breakout_probability: 0.5
+  fakeout_detection:
+    description: Surface structures with high fakeout risk.
+    timeframes: [1d, 4h, 1h]
+    max_execution_quality: neutral

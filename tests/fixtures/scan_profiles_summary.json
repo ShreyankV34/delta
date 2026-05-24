@@ -1,0 +1,21 @@
+{
+  "kind": "scan",
+  "source_path": "configs/scan_profiles.yaml",
+  "profiles": [
+    {
+      "name": "compression_scanner",
+      "description": "Offline scan for mature compression structures.",
+      "timeframes": ["1d", "4h", "1h"]
+    },
+    {
+      "name": "breakout_probability",
+      "description": "Rank symbols by baseline breakout probability.",
+      "timeframes": ["4h", "1h", "15m"]
+    },
+    {
+      "name": "fakeout_detection",
+      "description": "Surface structures with high fakeout risk.",
+      "timeframes": ["1d", "4h", "1h"]
+    }
+  ]
+}
